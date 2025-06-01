@@ -36,20 +36,18 @@ neuro_fuzzy_control.py  | Neuro-fuzzy controller using MLPRegressor for learning
 ga_pid_tuning.py        | Genetic Algorithm to tune PID controller gains
 performance_metrics.py  | Calculates key performance metrics such as MSE, overshoot, rise time, settling time
 gui_simulation.py       | Main GUI application for running simulations and displaying results
-dc_motor_data.csv       | Recorded motor speed response data
+dc_motor_data.csv       | Recorded motor speed response data (run 'motor_model.py' to get this file)
 
 ---
 
 Getting Started
 
-Prerequisites
-
+Prerequisites:
 Make sure you have Python 3.x installed. Install the required Python packages using pip:
 
 pip install numpy matplotlib control pandas scikit-learn scikit-fuzzy deap
 
-Running the GUI
-
+Running the GUI:
 Launch the GUI simulation by running:
 
 python gui_simulation.py
@@ -78,4 +76,4 @@ The simulator calculates and displays the following metrics to evaluate controll
 
 Contributors
 
-Developed by Group 6: Irfan, Ikhwan, Isma & Akmal as part of the Computational Intelligence (MCTA 3371) Mini Project.
+Developed by Group 6: Irfan, Ikhwan, Isma & Akmal as part of the Computational Intelligence (MCTA 3371) Mini Project, Semester 2 24/25. 
