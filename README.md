@@ -1,50 +1,81 @@
-# DC-Motor-Controller-Simulator
-This project demonstrates the design and comparison of intelligent controllers for a DC motor system. It integrates Fuzzy Logic, Neuro-Fuzzy models, and PID control to simulate and optimise motor speed under load disturbances. It also features a full GUI interface for experimentation and performance analysis.
+DC Motor Controller Simulator
+
+This project implements and compares various control strategies for a DC motor system, including classical PID, Fuzzy Logic, and Neuro-Fuzzy controllers. It provides a graphical user interface (GUI) to simulate and analyse the controllers’ performance under different load disturbances. Additionally, it includes a Genetic Algorithm (GA) to automatically tune PID controller gains.
 
 ---
 
-## 📌 Objectives
+Project Objectives
 
-- Simulate a DC motor system using classical and intelligent control strategies
-- Evaluate controller performance (MSE, tracking behaviour)
-- Provide GUI-based simulation tools
-- Apply Genetic Algorithm (GA) to auto-tune PID gains
-- Use real step response data for fuzzy/neuro models
-
----
-
-## 🧠 Computational Intelligence Features
-
-| Technique          | Description |
-|--------------------|-------------|
-| **Fuzzy Logic**    | Rule-based inference using linguistic variables and membership functions |
-| **Neuro-Fuzzy**    | Combines fuzzy logic input structure with machine learning (MLP regressor) |
-| **GA-PID Tuning**  | Genetic Algorithm optimisation of PID gains using DEAP |
-| **PID Controller** | Classical control technique for reference tracking |
+- Simulate a DC motor system using different control approaches  
+- Compare controller performance based on metrics such as Mean Squared Error (MSE), rise time, overshoot, and settling time  
+- Provide an interactive GUI for easy experimentation and visualisation  
+- Implement a GA-based PID tuning method to optimise controller parameters  
+- Use real motor response data to train fuzzy and neuro-fuzzy models  
 
 ---
 
-## 🗂 File Descriptions
+Features
 
-| File | Description |
-|------|-------------|
-| `motor_model.py` | Simulates DC motor model and exports `dc_motor_data.csv` |
-| `pid_control.py` | Manual PID controller simulation |
-| `fuzzy_control.py` | Fuzzy logic controller with rule base |
-| `neuro_fuzzy_controller.py` | Neuro-Fuzzy model using MLPRegressor |
-| `ga_pid_tuning.py` | Genetic Algorithm optimiser for PID tuning |
-| `performance_metrics.py` | Evaluates performance metrics (MSE, etc.) |
-| `gui_simulation.py` | GUI application for running simulations |
-| `dc_motor_data.csv` | Motor response data used for learning/simulation (Run 'motor_model.py' to get this .csv file) |
-| `README.md` | Project instructions and overview |
+Controller Type     | Description
+--------------------|------------------------------------------------------------
+PID Controller      | Classical proportional–integral–derivative control
+Fuzzy Logic         | Rule-based inference with linguistic variables and membership functions
+Neuro-Fuzzy         | Hybrid model combining fuzzy logic with machine learning (MLP regressor)
+GA Tuning           | Genetic Algorithm optimisation of PID gains
 
 ---
 
-## ✅ Requirements
+File Overview
 
-Install all dependencies with:
+Filename                | Description
+------------------------|---------------------------------------------------------
+motor_model.py          | Simulates the DC motor and generates the data file dc_motor_data.csv
+pid_control.py          | PID controller simulation code
+fuzzy_control.py        | Fuzzy logic controller implementation
+neuro_fuzzy_control.py  | Neuro-fuzzy controller using MLPRegressor for learning
+ga_pid_tuning.py        | Genetic Algorithm to tune PID controller gains
+performance_metrics.py  | Calculates key performance metrics such as MSE, overshoot, rise time, settling time
+gui_simulation.py       | Main GUI application for running simulations and displaying results
+dc_motor_data.csv       | Recorded motor speed response data
 
-```bash
+---
+
+Getting Started
+
+Prerequisites
+
+Make sure you have Python 3.x installed. Install the required Python packages using pip:
+
 pip install numpy matplotlib control pandas scikit-learn scikit-fuzzy deap
 
-Developed by Group 6 (Irfan, Ikhwan, Isma & Akmal) part of a Computational Intelligence (MCTA 3371) Mini Project. Demonstrates how hybrid computational intelligence techniques can improve classical control methods through learning, adaptability, and evolution.
+Running the GUI
+
+Launch the GUI simulation by running:
+
+python gui_simulation.py
+
+---
+
+Usage
+
+- Select the desired controller type (PID, Fuzzy Logic, or Neuro-Fuzzy)
+- Adjust PID parameters or disturbance load as needed
+- Click Run Simulation to see the motor speed response and performance metrics
+- Optionally, use GA Tune PID Gains to automatically find optimal PID parameters
+
+---
+
+Performance Evaluation
+
+The simulator calculates and displays the following metrics to evaluate controller performance:
+
+- Mean Squared Error (MSE) between the motor speed and the setpoint
+- Overshoot — how much the response exceeds the setpoint
+- Rise Time — time taken for the response to reach 90% of the setpoint
+- Settling Time — time taken for the response to stay within a tolerance band around the setpoint
+
+---
+
+Contributors
+
+Developed by Group 6: Irfan, Ikhwan, Isma & Akmal as part of the Computational Intelligence (MCTA 3371) Mini Project.
