@@ -46,3 +46,5 @@ Install all dependencies with:
 
 ```bash
 pip install numpy matplotlib control pandas scikit-learn scikit-fuzzy deap
+
+Developed by Group 6 (Irfan, Ikhwan, Isma & Akmal) part of a Computational Intelligence (MCTA 3371) Mini Project. Demonstrates how hybrid computational intelligence techniques can improve classical control methods through learning, adaptability, and evolution.
