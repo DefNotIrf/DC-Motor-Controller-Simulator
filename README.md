@@ -47,7 +47,7 @@ Make sure you have Python 3.x installed. Install the required Python packages us
 
 '''bash  
 pip install numpy matplotlib control pandas scikit-learn scikit-fuzzy deap
-'''
+
 
 ## Running the GUI:
 Launch the GUI simulation by running:
