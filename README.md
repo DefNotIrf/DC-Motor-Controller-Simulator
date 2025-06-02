@@ -42,19 +42,18 @@ dc_motor_data.csv       | Recorded motor speed response data (run 'motor_model.p
 
 ## Getting Started!
 
-## Prerequisites:
-> [!IMPORTANT]
-> Make sure you have Python 3.x installed. Install the required Python packages using pip:
-
+### Prerequisites:
+Make sure you have Python 3.x installed. Install the required Python packages using pip:
 ``` 
 pip install numpy matplotlib control pandas scikit-learn scikit-fuzzy deap
 ```
 
-## Running the GUI:
+### Produce DC Motor Data:
+You must run 'motor_model.py' first to obtain the .csv file before launching the GUI simulation
+
+### Running the GUI:
 Launch the GUI simulation by running:
-
 python gui_simulation.py
-
 ---
 
 ## Usage
