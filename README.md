@@ -1,10 +1,10 @@
-DC Motor Controller Simulator
+# DC Motor Controller Simulator
 
 This project implements and compares various control strategies for a DC motor system, including classical PID, Fuzzy Logic, and Neuro-Fuzzy controllers. It provides a graphical user interface (GUI) to simulate and analyse the controllers’ performance under different load disturbances. Additionally, it includes a Genetic Algorithm (GA) to automatically tune PID controller gains.
 
 ---
 
-Project Objectives
+## Project Objectives
 
 - Simulate a DC motor system using different control approaches  
 - Compare controller performance based on metrics such as Mean Squared Error (MSE), rise time, overshoot, and settling time  
@@ -14,7 +14,7 @@ Project Objectives
 
 ---
 
-Features
+## Features
 
 Controller Type     | Description
 --------------------|------------------------------------------------------------
@@ -25,7 +25,7 @@ GA Tuning           | Genetic Algorithm optimisation of PID gains
 
 ---
 
-File Overview
+## File Overview
 
 Filename                | Description
 ------------------------|---------------------------------------------------------
@@ -40,21 +40,23 @@ dc_motor_data.csv       | Recorded motor speed response data (run 'motor_model.p
 
 ---
 
-Getting Started
+## Getting Started
 
-Prerequisites:
+# Prerequisites:
 Make sure you have Python 3.x installed. Install the required Python packages using pip:
 
+'''bash  
 pip install numpy matplotlib control pandas scikit-learn scikit-fuzzy deap
+'''
 
-Running the GUI:
+# Running the GUI:
 Launch the GUI simulation by running:
 
 python gui_simulation.py
 
 ---
 
-Usage
+## Usage
 
 - Select the desired controller type (PID, Fuzzy Logic, or Neuro-Fuzzy)
 - Adjust PID parameters or disturbance load as needed
@@ -63,7 +65,7 @@ Usage
 
 ---
 
-Performance Evaluation
+## Performance Evaluation
 
 The simulator calculates and displays the following metrics to evaluate controller performance:
 
@@ -74,6 +76,6 @@ The simulator calculates and displays the following metrics to evaluate controll
 
 ---
 
-Contributors
+## Contributors
 
 Developed by Group 6: Irfan, Ikhwan, Isma & Akmal as part of the Computational Intelligence (MCTA 3371) Mini Project, Semester 2 24/25. 
