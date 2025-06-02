@@ -53,7 +53,9 @@ You must run 'motor_model.py' first to obtain the .csv file before launching the
 
 ### Running the GUI:
 Launch the GUI simulation by running:
+```
 python gui_simulation.py
+```
 ---
 
 ## Usage
