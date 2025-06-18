@@ -18,6 +18,6 @@ def calculate_performance_metrics(time, response, setpoint=1.0):
         settling_time = time[-1]
 
     if rise_time is None:
-        rise_time = -1  # flag for missing rise time
+        rise_time = -1 
 
     return overshoot, rise_time, settling_time
