@@ -32,13 +32,14 @@ GA Tuning for PID   | Genetic Algorithm optimisation of PID gains
 Filename                | Description
 ------------------------|---------------------------------------------------------
 motor_model.py          | Simulates the DC motor and generates the data file dc_motor_data.csv
+controller_comparison.py| Run all controller and produce outputs data controller_outputs.csv
 pid_control.py          | PID controller simulation code
 fuzzy_control.py        | Fuzzy logic controller implementation
 neuro_fuzzy_control.py  | Neuro-fuzzy controller using MLPRegressor for learning
 ga_pid_tuning.py        | Genetic Algorithm to tune PID controller gains
 performance_metrics.py  | Calculates key performance metrics such as MSE, overshoot, rise time, settling time
 gui_simulation.py       | Main GUI application for running simulations and displaying results
-plot_outputs.py         | Optional script to visualise outputs from controller_outputs.csv
+plot_output.py          | Optional script to visualise outputs from controller_outputs.csv
 dc_motor_data.csv       | Recorded motor speed response data (run 'motor_model.py' to get this file)
 controller_outputs.csv  | Stores step response output of all controllers (PID, GA-PID, Neuro-Fuzzy)
 
@@ -55,15 +56,20 @@ pip install numpy matplotlib control pandas scikit-learn scikit-fuzzy deap
 ### Produce DC Motor Data:
 You must run 'motor_model.py' first to obtain the .csv file before launching the GUI simulation
 
+### Produce Controller Outputs:
+You must run 'controller_comparison.py'  to obtain the .csv file before plotting the outputs
+
 ### Running the GUI:
 Launch the GUI simulation by running:
 ```
 python gui_simulation.py
 ```
 
-### Produce Controller Outputs:
-You must run '.py'  to obtain the .csv file before plotting the outputs
-
+#### Visualising the Outputs:
+Plot the response of the controller  by running:
+```
+python plot_output.py
+```
 ---
 
 ## Usage
