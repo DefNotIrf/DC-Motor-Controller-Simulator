@@ -47,25 +47,25 @@ controller_outputs.csv  | Stores step response output of all controllers (PID, G
 
 ## Getting Started!
 
-### Prerequisites:
+### 0. Prerequisites:
 Make sure you have Python 3.x installed. Install the required Python packages using pip:
 ``` 
 pip install numpy matplotlib control pandas scikit-learn scikit-fuzzy deap
 ```
 
-### Produce DC Motor Data:
+### 1. Produce DC Motor Data:
 You must run 'motor_model.py' first to obtain the .csv file before launching the GUI simulation
 
-### Produce Controller Outputs:
+### 2. Produce Controller Outputs:
 You must run 'controller_comparison.py'  to obtain the .csv file before plotting the outputs
 
-### Running the GUI:
+### 3. Running the GUI:
 Launch the GUI simulation by running:
 ```
 python gui_simulation.py
 ```
 
-#### Visualising the Outputs:
+### 4.Visualising the Outputs:
 Plot the response of the controller  by running:
 ```
 python plot_output.py
