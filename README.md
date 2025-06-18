@@ -10,7 +10,9 @@ This project implements and compares various control strategies for a DC motor s
 - Compare controller performance based on metrics such as Mean Squared Error (MSE), rise time, overshoot, and settling time  
 - Provide an interactive GUI for easy experimentation and visualisation  
 - Implement a GA-based PID tuning method to optimise controller parameters  
-- Use real motor response data to train fuzzy and neuro-fuzzy models  
+- Use real motor response data to train fuzzy and neuro-fuzzy models
+- Extracted and saved original model output vs input data for performance comparison
+- Plotted all controller responses (PID, GA-PID, Neuro-Fuzzy) for visual analysis
 
 ---
 
@@ -21,7 +23,7 @@ Controller Type     | Description
 PID Controller      | Classical proportional–integral–derivative control
 Fuzzy Logic         | Rule-based inference with linguistic variables and membership functions
 Neuro-Fuzzy         | Hybrid model combining fuzzy logic with machine learning (MLP regressor)
-GA Tuning           | Genetic Algorithm optimisation of PID gains
+GA Tuning for PID   | Genetic Algorithm optimisation of PID gains
 
 ---
 
@@ -36,7 +38,9 @@ neuro_fuzzy_control.py  | Neuro-fuzzy controller using MLPRegressor for learning
 ga_pid_tuning.py        | Genetic Algorithm to tune PID controller gains
 performance_metrics.py  | Calculates key performance metrics such as MSE, overshoot, rise time, settling time
 gui_simulation.py       | Main GUI application for running simulations and displaying results
+plot_outputs.py         | Optional script to visualise outputs from controller_outputs.csv
 dc_motor_data.csv       | Recorded motor speed response data (run 'motor_model.py' to get this file)
+controller_outputs.csv  | Stores step response output of all controllers (PID, GA-PID, Neuro-Fuzzy)
 
 ---
 
@@ -56,6 +60,10 @@ Launch the GUI simulation by running:
 ```
 python gui_simulation.py
 ```
+
+### Produce Controller Outputs:
+You must run '.py'  to obtain the .csv file before plotting the outputs
+
 ---
 
 ## Usage
@@ -64,6 +72,8 @@ python gui_simulation.py
 - Adjust PID parameters or disturbance load as needed
 - Click Run Simulation to see the motor speed response and performance metrics
 - Optionally, use GA Tune PID Gains to automatically find optimal PID parameters
+- Use the exported 'controller_outputs.csv' for documenting and comparing controller responses
+- Run 'plot_outputs.py' to visualise all controller outputs against the setpoint
 
 ---
 
@@ -75,6 +85,8 @@ The simulator calculates and displays the following metrics to evaluate controll
 - Overshoot — how much the response exceeds the setpoint
 - Rise Time — time taken for the response to reach 90% of the setpoint
 - Settling Time — time taken for the response to stay within a tolerance band around the setpoint
+
+Outside of the simulator, we can also plot the respective outputs against the setpoint, which the default are step response
 
 ---
 
