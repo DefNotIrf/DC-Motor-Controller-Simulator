@@ -14,7 +14,7 @@ def run_pid(Kp=100, Ki=200, Kd=10, load_disturbance=0.0):
     time = np.linspace(0, 2, 1000)
     t, response = ctrl.step_response(system, T=time)
 
-    # Simulate disturbance effect (simple subtraction)
+    # Simulate disturbance effect
     disturbed_response = response - load_disturbance
     disturbed_response = np.clip(disturbed_response, 0, None)
 
