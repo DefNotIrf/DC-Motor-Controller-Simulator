@@ -55,6 +55,6 @@ def run_fuzzy(load_disturbance=0.0):
         sim.compute()
         output_values.append(sim.output['output'])
 
-    time = np.linspace(0, 2, len(output_values))  # create time vector
+    time = np.linspace(0, 2, len(output_values))
 
     return time, np.array(output_values)
