@@ -16,9 +16,9 @@ def simulate_motor_step(load_disturbance=0.0, T=2, N=1000):
     time = np.linspace(0, T, N)
     t, response = ctrl.step_response(system, T=time)
 
-    # Simulate load disturbance by reducing output speed by disturbance factor (simplified)
+    # Simulate load disturbance by reducing output speed by disturbance factor
     disturbed_response = response - load_disturbance * np.ones_like(response)
-    disturbed_response = np.clip(disturbed_response, 0, None)  # speed can't be negative
+    disturbed_response = np.clip(disturbed_response, 0, None)  
 
     return t, disturbed_response
 
